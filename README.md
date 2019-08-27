@@ -1,1 +1,1 @@
-# cassandra-store-stress
+# Cassandra-store-stress
