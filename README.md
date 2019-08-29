@@ -4,7 +4,7 @@
 ## Cassandra-store-stress
 
 
-Variation of Bandwidth in MB/s with key-value batch size in Bytes.
+Variation of Bandwidth in MB/s with key-value batch size in Bytes. Client concurency is 1.
 
 | #                          	| 614     	| 1024    	| 3072    	| 15360    	| 32768   	| 65536   	|
 |----------------------------	|---------	|---------	|---------	|----------	|---------	|---------	|
@@ -13,8 +13,31 @@ Variation of Bandwidth in MB/s with key-value batch size in Bytes.
 | TRUNCATE TABLE             	| 616     	| 133     	| 898     	| 760      	| 764     	| 727     	|
 
 ### Summary
-1. These tests were done on a local dev workstation with one/three node cassandra cluster.
-2. Bandwidth of writes increases when batch size increases. 
-3. Bulk read seems to perform worse than even sequestial write when batch size is large.
-3. Truncate is independent of size of table. So indeed truncate is metadata change only.
+1. Bandwidth of writes increases when batch size increases. 
+2. Bulk read seems to perform worse than even sequestial write when batch size is large.
+3. Writes outperforms reads on average strenthening the fact that cassandra is write performant.
+4. Truncate is independent of size of table. So indeed truncate is metadata change only.
 
+
+## Leveldb streess tests
+
+| #                          	| 65536    	|
+|----------------------------	|----------	|
+| SEQUENTIAL WRITE           	| 85.1396  	|
+| SEQUENTIAL READ KEY/VALUES 	| 79.40825 	|
+| TRUNCATE TABLE             	| 78.92575 	|
+
+### Summary
+2. Leveldb is not a distributed store, hence corresponding bandwidth are better  than cassandra. 
+3. Bulk read seems to perform worse than even sequestial write when batch size is large.
+3. Truncate is worse compared to cassandra, there is some hidden gc cost. 
+
+## [Apache Cassandra™ Leads All Others In Latest NoSQL Benchmark]. (https://pages.github.com/).
+
+NoSQL databases are challenging relational technologies by delivering the flexibility required of modern applications. But, which NoSQL database is best architected to handle performance demands of today’s workloads? 
+
+Benchmarks recently run by End Point an independent database firm, stress-tested Apache Cassandra, HBase, MongoDB, and Couchbase on operations typical to real-world applications. Results showed that Cassandra outperformed its NoSQL counterparts. 
+
+In fact, for mixed operational and analytic workloads typical to modern Web, Mobile and IOT applications, Cassandra performed six times faster than HBase and 195 times faster than MongoDB.
+
+![alt text](https://user-images.githubusercontent.com/5080310/63927250-f1961600-ca6a-11e9-9828-49aa7dd504ba.png)
