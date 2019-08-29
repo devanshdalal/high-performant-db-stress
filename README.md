@@ -21,18 +21,18 @@ Variation of Bandwidth in MB/s with key-value batch size in Bytes. Client concur
 
 ## Leveldb streess tests
 
-| #                          	| 65536    	|
-|----------------------------	|----------	|
-| SEQUENTIAL WRITE           	| 85.1396  	|
-| SEQUENTIAL READ KEY/VALUES 	| 79.40825 	|
-| TRUNCATE TABLE             	| 78.92575 	|
+| #                          	| Bandwidth(batch size: 65536 B)    	|
+|----------------------------	|------------------------------------	|
+| SEQUENTIAL WRITE           	| 85.1396  	                          |
+| SEQUENTIAL READ KEY/VALUES 	| 79.40825 	                          |
+| TRUNCATE TABLE             	| 78.92575 	                          |
 
 ### Summary
 2. Leveldb is not a distributed store, hence corresponding bandwidth are better  than cassandra. 
 3. Bulk read seems to perform worse than even sequestial write when batch size is large.
 3. Truncate is worse compared to cassandra, there is some hidden gc cost. 
 
-## [Apache Cassandra™ Leads All Others In Latest NoSQL Benchmark]. (https://pages.github.com/).
+## [Apache Cassandra™ Leads All Others In Latest NoSQL Benchmark]. (https://www.datastax.com/apache-cassandra-leads-nosql-benchmark).
 
 NoSQL databases are challenging relational technologies by delivering the flexibility required of modern applications. But, which NoSQL database is best architected to handle performance demands of today’s workloads? 
 
