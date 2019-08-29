@@ -4,7 +4,7 @@
 ## Cassandra-store-stress
 
 
-Variation of Bandwidth in MB/s with key-value batch size.
+Variation of Bandwidth in MB/s with key-value batch size in Bytes.
 
 | #                          	| 614     	| 1024    	| 3072    	| 15360    	| 32768   	| 65536   	|
 |----------------------------	|---------	|---------	|---------	|----------	|---------	|---------	|
