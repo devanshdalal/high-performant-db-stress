@@ -41,3 +41,6 @@ Benchmarks recently run by End Point an independent database firm, stress-tested
 In fact, for mixed operational and analytic workloads typical to modern Web, Mobile and IOT applications, Cassandra performed six times faster than HBase and 195 times faster than MongoDB.
 
 ![alt text](https://user-images.githubusercontent.com/5080310/63927250-f1961600-ca6a-11e9-9828-49aa7dd504ba.png)
+
+## References
+1. https://gist.github.com/devanshdalal/9ae6c474a9235db853ce2dbb4ebfa425
