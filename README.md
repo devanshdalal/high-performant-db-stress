@@ -112,7 +112,7 @@ power management:
 3. Bulk read seems to perform worse than even sequestial write when batch size is large.
 3. Truncate is worse compared to cassandra, there is some hidden gc cost. 
 
-## [Apache Cassandra™ Leads All Others In Latest NoSQL Benchmark]. (https://www.datastax.com/apache-cassandra-leads-nosql-benchmark).
+## [Apache Cassandra™ Leads All Others In Latest NoSQL Benchmark](https://www.datastax.com/apache-cassandra-leads-nosql-benchmark).
 
 NoSQL databases are challenging relational technologies by delivering the flexibility required of modern applications. But, which NoSQL database is best architected to handle performance demands of today’s workloads? 
 
